@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing Elements</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 2000px;
+            flex-direction: column;
+            background-image:url('background1.png') ;
+            /* background-size: ; */
+            /* background-repeat: no-repeat; */
+            overflow: hidden;
+        }
+        .popup {
+            position: absolute;
+            top: 20%;
+            font-size: 288px;
+            align-items: center;
+            justify-content: center;
+            justify-self: center;
+            justify-items: center;
+            text-align: center;
+            border-radius: 100%;
+            font-weight: bold;
+            color: rgb(35, 21, 31);
+            background-image: url('sakura.jpg');
+            padding: 20px;
+            border: black solid;
+            border-radius: 500px;
+            animation: bounce 0.5s infinite alternate, fadeOut 1s ease-in-out 4s forwards;
+        }
+        .hidden {
+            display: none;
+        }
+        .bouncing-image {
+            width: 1200px;
+            border: black solid 5px;
+            border-radius: 50px;
+        
+            animation: bounce 0.5s infinite alternate, fadeIn 1s ease-in-out;
+        }
+        .button-container {
+            position: absolute;
+            bottom: 150px;
+
+        }
+        .bouncing-button {
+            /* padding: 15px 30px; */
+            padding: auto;
+            font-size: 98px;
+            height: 155px;
+
+            font-weight: bold;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: rgb(255, 68, 0);
+            color: white;
+            border: rgb(0, 0, 0) solid ;
+            border-radius: 50px;
+
+            cursor: pointer;
+            animation: bounce 0.5s infinite alternate, fadeIn 1s ease-in-out;
+        }
+        .bouncing-button:hover {
+            background-color: darkblue;
+            align-items: center;
+        }
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-20px); }
+        }
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <audio id="bgMusic" autoplay>
+        <source src="audio1.mpeg" type="audio/mpeg">
+    </audio>
+    <div id="popup" class="popup">Radhe Radhe Jeetudii💝</div>
+    <img id="bouncingImage" class="bouncing-image hidden" src="radhe1.jpeg" alt="Bouncing Image">
+    <div class="button-container">
+        <button id="redirectButton" class="bouncing-button hidden" onclick="redirect()">Chale ? 😁</button>
+    </div>
+    <script>
+        
+        document.getElementById('bgMusic').play();
+        setTimeout(() => {
+            document.getElementById('popup').classList.add('hidden');
+            document.getElementById('bouncingImage').classList.remove('hidden');
+            document.getElementById('redirectButton').classList.remove('hidden');
+        }, 5000);
+        function redirect() {
+            window.location.href = "last.html";
+        }
+    </script>
+</body>
+</html>

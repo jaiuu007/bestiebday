@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- Goma Peach Stickers -->
+<div class="goma-container4">
+    <img src="goma7.gif" alt="Goma Peach GIF" class="goma4">
+    <img src="goma8.gif" alt="Goma Peach GIF" class="goma4">
+    
+</div>
+<div class="goma-container3">
+    <img src="goma6.gif" alt="Goma Peach GIF" class="goma3">
+    <img src="goma5.gif" alt="Goma Peach GIF" class="goma3">
+</div>
+    <div class="container">
+        <h1>🎂🎉Happy Birthday, Jeetu💝🦉 </h1>
+        <p><strong>Tap the <u>'Tap' button</u> fir Tap the gift box!</strong></p>
+
+        <!-- Gift Box -->
+        <div class="gift-box" onclick="openScrollPage()">
+            <img src="giftbox.png" alt="Gift Box">
+        </div>
+
+        <!-- Hidden Surprise Message -->
+        <div id="message" class="hidden">
+            <p>Wishing you the happiest birthday ever! Jeetudiii 🎂🎈</p>
+            <img src="peach.gif" alt="Goma Peach">
+        </div>
+
+        <!-- Background Music -->
+        <audio id="birthdayMusic" autoplay loop>
+            <source src="tera mujhse.mpeg" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <button id="playMusicBtn" onclick="toggleMusic()">🎵 Play Music</button>
+
+        <!-- Navigation Menu -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="welcome.html">Memories</a>
+            <!-- Surprise Link -->
+            <a href="#" id="surprise-link" onclick="triggerFireworks(event)">🎉Tap🍾</a>
+
+            <!-- Fireworks Canvas -->
+            <canvas id="fireworksCanvas"></canvas>
+
+            <script src="fireworks.js"></script>
+
+            <!-- <a href="gallery.html">Gallery</a> -->
+            <a href="video.html">Kuchh h</a> <!-- New Page -->
+
+
+        </nav>
+
+    </div>
+    <div class="balloons">
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+
+        <!-- You can add more balloons if needed -->
+    </div>
+</body>
+
+</html>
