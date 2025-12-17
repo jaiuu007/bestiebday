@@ -1,458 +1,567 @@
 /* General Styles */
-* {
-  box-sizing: border-box;
-}
-
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  background-image: url("sakuraa.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: rgb(0, 0, 0);
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  overflow-x: hidden;
-  position: relative;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('sakuraa.jpg');
+    background-size: cover;
+    color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Ensures full height */
+    overflow: hidden;
+    /* Prevents scrollbars */
+    position: relative;
+
+    
 }
 
-/* Container */
+/* Container to Fit Full Screen */
 .container {
-  width: 100%;
-  max-width: 1200px;
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 30px;
-  border: rgb(11, 150, 237) solid 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 5200px;
+    /* Makes it large enough for desktops */
+    height: 2250px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 90px;
+    border: rgb(11, 150, 237) solid 46px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
 }
 
-/* Headings and text */
+/* Increase Font Sizes for Desktop */
 h1 {
-  font-size: clamp(2.4rem, 5vw, 4.5rem);
-  font-family: "Fredoka One", cursive;
-  color: #0400ff;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
-  animation: bounce 2s infinite ease-in-out;
+    font-size: 7rem;
+    font-family: 'Fredoka One', cursive;
+    /* Funky font */
+    color: #0400ff;
+    /* Bright yellow */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    animation: bounce 2s infinite ease-in-out;
+    text-shadow: #adadad 25px 15px;
 }
 
 p {
-  font-size: clamp(1.1rem, 2.2vw, 1.8rem);
-  font-family: "Fredoka One", cursive;
-  color: #000000;
+    font-size: 2.8rem;
+    font-family: 'Fredoka One', cursive;
+    color: #000000;
+
 }
 
 /* Gift Box */
-.gift-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1.5rem 0;
-}
-
 .gift-box img {
-  width: min(300px, 60vw);
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
+    width: 700px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
 }
 
 .gift-box img:hover {
-  transform: scale(1.1);
+    transform: scale(1.8);
+}
+
+.gift-box {
+align-items: center;
+justify-content: center;
+justify-self: center;
 }
 
 /* Message Styling */
 #message {
-  margin-top: 1rem;
-  color: black;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-style: oblique;
-  font-size: 1.2rem;
-  transition: transform 0.1s ease-in-out;
-}
-
-#message p {
-  transform: scale(1.2);
-}
-
-#message img {
-  width: min(220px, 45vw);
-  border-radius: 50%;
-  border: black solid 6px;
-}
-
-/* Goma Peach Stickers */
-.goma-container,
-.goma-container2,
-.goma-container3,
-.goma-container4 {
-  position: fixed;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  pointer-events: none;
-  z-index: -1;
+    margin-top: 20px;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+    font-size: 20px;
+    transition: transform 0.1s ease-in-out;
 }
 
 .goma-container {
-  top: 5%;
-  left: 5%;
+    position:fixed;
+    bottom: 690px;
+    left: 450px;
+    width: 100%;
+    top: 500px;
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.goma-container2{
+    position:fixed;
+    bottom: 690px;
+    left: 4200px;
+    width: 100%;
+    top: 500px;
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+}
+.goma-container3{
+    position:fixed;
+    bottom: 690px;
+    left: 490px;
+    width: 100%;
+    top: 500px;
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+}
+.goma-container4{
+    position:fixed;
+    bottom: 690px;
+    left: 4200px;
+    width: 100%;
+    top: 500px;
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+}
+.goma3{
+    width: 800px; /* Adjust size as needed */
+    height: auto;
+    border: #000000 solid;
+    /* width: auto; */
+    height: auto;
+
+    border-radius: 50%;
+background-color: #13defd;
+    animation: bounce 1.5s infinite alternate;
+}
+.goma4{
+    width: 800px; /* Adjust size as needed */
+    height: auto;
+    border: #000000 solid;
+    border-radius: 50%;
+background-color: #13defd;
+    animation: bounce 1.5s infinite alternate;
 }
 
-.goma-container2 {
-  top: 5%;
-  right: 5%;
+.goma2{
+    width: 800px; /* Adjust size as needed */
+    height: auto;
+    border: #000000 solid;
+background-color: #13defd;
+    animation: bounce 1.5s infinite alternate;
 }
 
-.goma-container3 {
-  bottom: 5%;
-  left: 5%;
+.goma {
+    width: 800px; /* Adjust size as needed */
+    height: auto;
+border: #000000 solid;
+border-radius: 50%;
+background-color: #13defd;
+    animation: bounce 1.5s infinite alternate;
 }
 
-.goma-container4 {
-  bottom: 5%;
-  right: 5%;
-}
-
-.goma,
-.goma2,
-.goma3,
-.goma4 {
-  width: clamp(80px, 16vw, 140px);
-  height: auto;
-  border: #000000 solid 2px;
-  border-radius: 50%;
-  background-color: #13defd;
-  animation: bounce 1.5s infinite alternate;
-}
-
-/* Bounce keyframes (for stickers, headings etc.) */
+/* Add a bounce effect to the stickers */
 @keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-10px);
-  }
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+
+#message p {
+    transform: scale(1.5);
+}
+
+#message img {
+    width: 520px;
+    border-radius: 50%;
+    border: black solid 12px;
+
 }
 
 /* Navigation Menu */
 nav {
-  margin-top: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
+    margin-top: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
 }
 
 nav a {
-  text-decoration: none;
-  color: rgb(4, 4, 4);
-  font-weight: bold;
-  background: rgb(63, 255, 255);
-  padding: 0.5rem 1rem;
-  border-radius: 50px;
-  font-family: "Fredoka One", cursive;
-  border: red solid 4px;
-  min-height: 3rem;
-  min-width: 7rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: clamp(1rem, 3.2vw, 2rem);
-  transition: 0.3s;
+    margin: 100px;
+    text-decoration: none;
+    color: rgb(4, 4, 4);
+    font-weight: bold;
+    background: rgb(63, 255, 255);
+    padding: 12px 2px;
+    border-radius: 85px;
+    font-family: 'Fredoka One', cursive;
+    border: red solid 12px;
+    height: 100px;
+    width: 520px;
+    align-items: center;
+    transition: 0.3s;
+    font-size: 5.2rem;
 }
 
 nav a:hover {
-  background: rgba(255, 255, 255, 0.94);
+    background: rgba(255, 255, 255, 0.934);
 }
 
-/* Video container */
+/* Responsive Video */
 .video-container {
-  position: relative;
-  width: 100%;
-  max-width: 900px;
-  margin: 1.5rem auto;
-  border: rgb(252, 172, 250) solid 8px;
-  border-radius: 30px;
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 2160px;
+    margin: 20px auto;
+    border: rgb(252, 172, 250) solid 55px;
+    border-radius: 85px;
+    height: 100;
 }
 
-.video-container video {
-  width: 100%;
-  height: auto;
-  display: block;
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
 }
 
-/* Play Music Button */
+/* Responsive Design */
+@media (max-width: 900px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .gift-box img {
+        width: 150px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        display: block;
+        width: 80%;
+        text-align: center;
+        margin: 5px auto;
+        font-size: 1rem;
+    }
+}
+
+/* Play Music Button Styling */
 #playMusicBtn {
-  background-color: #f2f2f2;
-  color: rgb(31, 29, 29);
-  font-size: clamp(1.1rem, 3vw, 1.8rem);
-  font-weight: bold;
-  padding: 0.75rem 1.25rem;
-  border: black solid 3px;
-  border-radius: 35px;
-  cursor: pointer;
-  transition: 0.3s;
-  width: min(260px, 80vw);
-  height: auto;
-  margin: 1.25rem auto;
-  display: block;
+    background-color: #f2f2f2;
+    color: rgb(31, 29, 29);
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 15px 25px;
+    border: black solid;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 500px;
+    height: 100px;
+    margin: 20px auto;
+    display: block;
+
 }
 
 #playMusicBtn:hover {
-  background-color: #e67e22;
-  transform: scale(1.05);
+    background-color: #e67e22;
+    transform: scale(1.5);
+
+
 }
 
 #playMusicBtn:focus {
-  outline: none;
+    outline: none;
+
 }
 
 /* Balloon Animation Styles */
 @keyframes floatBalloons {
-  0% {
-    transform: translateY(100vh);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(-100vh);
-    opacity: 1;
-  }
+    0% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(-100vh);
+        opacity: 1;
+    }
 }
 
-/* Balloon Container */
+/* Balloon Container (Invisible but used to position balloons) */
 .balloons {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: -2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: -1;
+    /* Ensures it stays behind other content */
 }
 
-/* Balloons */
+/* Balloon Styles */
 .balloon {
-  position: absolute;
-  bottom: -50px;
-  width: clamp(40px, 12vw, 120px);
-  height: clamp(55px, 16vw, 160px);
-  border-radius: 50%;
-  background-color: #ff9a9e;
-  animation: floatBalloons linear infinite;
-  opacity: 0.7;
+    position: absolute;
+    bottom: -50px;
+    /* padding-left: 0px; */
+    width: 360px;
+    height: 410px;
+    border-radius: 50%;
+    background-color: #ff9a9e;
+    animation: floatBalloons linear infinite;
+    opacity: 0.7;
+    pointer-events: none;
 }
 
-/* Balloon colors */
-.balloon:nth-child(4n + 1) {
-  background-color: #ff0000;
-  border: #000000 solid 1px;
-}
-.balloon:nth-child(4n + 2) {
-  background-color: #13defd;
-  border: #000000 solid 1px;
-}
-.balloon:nth-child(4n + 3) {
-  background-color: #fde613;
-  border: #000000 solid 1px;
-}
-.balloon:nth-child(4n + 4) {
-  background-color: #fd13d6;
-  border: #000000 solid 1px;
+/* Randomize Balloon Colors */
+.balloon:nth-child(4n+1) {
+    background-color: #ff0000;
+    border: #000000 solid 1px;
 }
 
-/* Balloon positions and durations */
+.balloon:nth-child(4n+2) {
+    background-color: #13defd;
+    border: #000000 solid 1px;
+}
+
+.balloon:nth-child(4n+3) {
+    background-color: #fde613;
+    border: #000000 solid 1px;
+}
+
+.balloon:nth-child(4n+4) {
+    background-color: #fd13d6;
+    border: #000000 solid 1px;
+}
+
+
+/* Random Balloon Positions and Animation Durations */
 .balloon:nth-child(1) {
-  left: 10%;
-  animation-duration: 12s;
-  animation-delay: 0s;
-}
-.balloon:nth-child(2) {
-  left: 20%;
-  animation-duration: 15s;
-  animation-delay: 2s;
-}
-.balloon:nth-child(3) {
-  left: 30%;
-  animation-duration: 18s;
-  animation-delay: 3s;
-}
-.balloon:nth-child(4) {
-  left: 40%;
-  animation-duration: 13s;
-  animation-delay: 4s;
-}
-.balloon:nth-child(5) {
-  left: 50%;
-  animation-duration: 16s;
-  animation-delay: 5s;
-}
-.balloon:nth-child(6) {
-  left: 60%;
-  animation-duration: 17s;
-  animation-delay: 1s;
-}
-.balloon:nth-child(7) {
-  left: 70%;
-  animation-duration: 20s;
-  animation-delay: 6s;
-}
-.balloon:nth-child(8) {
-  left: 80%;
-  animation-duration: 19s;
-  animation-delay: 7s;
-}
-.balloon:nth-child(9) {
-  left: 90%;
-  animation-duration: 14s;
-  animation-delay: 8s;
+    left: 10%;
+    animation-duration: 12s;
+    animation-delay: 0s;
 }
 
-/* Music Box (for pages that use .music-box UI, not <audio> directly) */
+.balloon:nth-child(2) {
+    left: 20%;
+    animation-duration: 15s;
+    animation-delay: 2s;
+}
+
+.balloon:nth-child(3) {
+    left: 30%;
+    animation-duration: 18s;
+    animation-delay: 3s;
+}
+
+.balloon:nth-child(4) {
+    left: 40%;
+    animation-duration: 13s;
+    animation-delay: 4s;
+}
+
+.balloon:nth-child(5) {
+    left: 50%;
+    animation-duration: 16s;
+    animation-delay: 5s;
+}
+
+.balloon:nth-child(6) {
+    left: 60%;
+    animation-duration: 17s;
+    animation-delay: 1s;
+}
+
+.balloon:nth-child(7) {
+    left: 70%;
+    animation-duration: 20s;
+    animation-delay: 6s;
+}
+
+.balloon:nth-child(8) {
+    left: 80%;
+    animation-duration: 19s;
+    animation-delay: 7s;
+}
+
+.balloon:nth-child(9) {
+    left: 90%;
+    animation-duration: 14s;
+    animation-delay: 8s;
+}
+
+/* Add more if you want more balloons */
+
+/* Adjust for mobile */
+@media (max-width: 900px) {
+    .balloon {
+        width: 45px;
+        height: 60px;
+    }
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+}
+
+/* Music Box Button */
 .music-box {
-  position: fixed;
-  bottom: 1.25rem;
-  right: 1.25rem;
-  background: #ffcc00;
-  padding: 1rem;
-  border-radius: 20px;
-  text-align: center;
-  width: min(260px, 70vw);
-  font-weight: bold;
-  color: #4a2c2a;
-  border: #000000 solid 3px;
-  font-size: clamp(1rem, 2.4vw, 1.5rem);
-  cursor: pointer;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ffcc00;
+    padding: 15px;
+    border-radius: 10px;
+    height: 800px;
+    text-align: center;
+    width: 800px;
+    font-weight: bold;
+    color: #4A2C2A;
+    border: #000000 solid ;
+    border-radius: 65px;
+    font-size: 55px;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 .music-box:hover {
-  transform: scale(1.05);
+    transform: scale(1.1);
 }
-
+/* Play/Stop Button */
 .music-box button {
-  background: #4a2c2a;
-  color: white;
-  border: none;
-  padding: 0.5rem 0.75rem;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 25px;
-}
+    background: #4A2C2A;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor:pointer;
+    border-radius: 55px;
 
+}
 .music-box button:hover {
-  background: #30201e;
+    background: #30201E ;
 }
 
+/* Volume Slider */
 .music-box input[type="range"] {
-  width: 100%;
-  margin-top: 0.5rem;
-  -webkit-appearance: none;
-  background: #e35353;
-  height: 10px;
-  border-radius: 55px;
-  outline: none;
+    width: 100%;
+    margin-top: 10px;
+    -webkit-appearance: none;
+    background: #e35353;
+    height: 20px;
+    border-radius: 55px;
+    outline: none;
 }
 
 .music-box input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 20px;
-  height: 20px;
-  background: #000000;
-  border-radius: 50%;
-  cursor: pointer;
+    -webkit-appearance:none;
+    width: 45px;
+    height: 45px;
+    background: #000000;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
-/* Scroll Container (scroll-letter page) */
+/* Scroll Container */
 .scroll-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 90vh;
-  width: min(100%, 1200px);
-  margin: 1.5rem auto;
-  padding: 1rem;
-  border: #000000 solid 4px;
-  border-radius: 40px;
-  background: linear-gradient(to right, #f8c291, #75b6fc);
-  overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    width: 150vh;
+    border: #000000 solid;
+    border-radius: 300px;
+    background: linear-gradient(to right, #f8c291, #75b6fc);
+    /* Warm background */
 }
 
-/* Scroll body */
+/* Scroll Design */
 .scroll {
-  width: 100%;
-  max-width: 1000px;
-  background: #f5e4c3;
-  max-height: 70vh;
-  padding: 2rem;
-  border-radius: 20px;
-  border-top: 12px solid #8b4513;
-  border-bottom: 12px solid #8b4513;
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
-  text-align: left;
-  font-family: "Dancing Script", cursive;
-  font-size: clamp(1.2rem, 2.3vw, 1.7rem);
-  color: #4a2c2a;
-  overflow-y: auto;
+    width: 100%;
+    max-width: 3100px;
+    background: #f5e4c3;
+    height: 100%;
+    max-height: 1600px;
+    padding: 90px;
+    border-radius: 35px;
+    border-top: 20px solid #8B4513;
+    border-bottom: 20px solid #8B4513;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #4A2C2A;
 }
 
 /* Scroll Content */
 .scroll-content h2 {
-  font-size: clamp(2.4rem, 5vw, 3.5rem);
-  font-weight: bold;
-  color: rgb(24, 42, 198);
-  margin-bottom: 0.75rem;
-  text-align: center;
+    font-size: 10rem;
+    font-weight: bold;
+    color: rgb(24, 42, 198);
+    margin-bottom: 10px;
 }
 
 .scroll-content p {
-  margin-bottom: 0.75rem;
-  font-size: clamp(1.2rem, 2.3vw, 1.6rem);
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    margin-bottom: 10px;
+    font-size: 60px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 /* Fireworks Canvas */
 #fireworksCanvas {
-  position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
 }
 
-/* Extra small screens adjustments */
-@media (max-width: 600px) {
-  body {
-    align-items: flex-start;
-    padding-top: 1.5rem;
-  }
-
-  .container {
-    border-width: 4px;
-    border-radius: 20px;
-    padding: 1.25rem;
-  }
-
-  nav {
-    gap: 0.75rem;
-  }
-
-  nav a {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-
-  .scroll-container {
-    border-radius: 24px;
-    border-width: 3px;
-  }
-
-  .scroll {
-    border-top-width: 8px;
-    border-bottom-width: 8px;
-  }
-}
