@@ -1,108 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bouncing Elements</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 2000px;
-            flex-direction: column;
-            background-image:url('background1.png') ;
-            /* background-size: ; */
-            /* background-repeat: no-repeat; */
-            overflow: hidden;
-        }
-        .popup {
-            position: absolute;
-            top: 20%;
-            font-size: 288px;
-            align-items: center;
-            justify-content: center;
-            justify-self: center;
-            justify-items: center;
-            text-align: center;
-            border-radius: 100%;
-            font-weight: bold;
-            color: rgb(35, 21, 31);
-            background-image: url('sakura.jpg');
-            padding: 20px;
-            border: black solid;
-            border-radius: 500px;
-            animation: bounce 0.5s infinite alternate, fadeOut 1s ease-in-out 4s forwards;
-        }
-        .hidden {
-            display: none;
-        }
-        .bouncing-image {
-            width: 1200px;
-            border: black solid 5px;
-            border-radius: 50px;
-        
-            animation: bounce 0.5s infinite alternate, fadeIn 1s ease-in-out;
-        }
-        .button-container {
-            position: absolute;
-            bottom: 150px;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bouncing Elements</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
+      background-image: url("background1.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      margin: 0;
+    }
 
-        }
-        .bouncing-button {
-            /* padding: 15px 30px; */
-            padding: auto;
-            font-size: 98px;
-            height: 155px;
+    .popup {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: clamp(2.2rem, 7vw, 4rem);
+      text-align: center;
+      font-weight: bold;
+      color: rgb(35, 21, 31);
+      background-image: url("sakura.jpg");
+      background-size: cover;
+      padding: 1rem 1.5rem;
+      border: black solid 4px;
+      border-radius: 40px;
+      animation: bouncePopup 0.6s infinite alternate,
+        fadeOut 1s ease-in-out 4s forwards;
+    }
 
-            font-weight: bold;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            background-color: rgb(255, 68, 0);
-            color: white;
-            border: rgb(0, 0, 0) solid ;
-            border-radius: 50px;
+    .hidden {
+      display: none;
+    }
 
-            cursor: pointer;
-            animation: bounce 0.5s infinite alternate, fadeIn 1s ease-in-out;
-        }
-        .bouncing-button:hover {
-            background-color: darkblue;
-            align-items: center;
-        }
-        @keyframes bounce {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-20px); }
-        }
-        @keyframes fadeOut {
-            0% { opacity: 1; }
-            100% { opacity: 0; }
-        }
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-    </style>
+    .bouncing-image {
+      max-width: min(90vw, 700px);
+      width: 100%;
+      border: black solid 4px;
+      border-radius: 25px;
+      animation: bounceImg 0.6s infinite alternate, fadeIn 1s ease-in-out;
+    }
+
+    .button-container {
+      position: absolute;
+      bottom: 8%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .bouncing-button {
+      font-size: clamp(1.4rem, 4vw, 2.2rem);
+      font-weight: bold;
+      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      background-color: rgb(255, 68, 0);
+      color: white;
+      border: rgb(0, 0, 0) solid 3px;
+      border-radius: 35px;
+      cursor: pointer;
+      padding: 0.75rem 1.75rem;
+      min-width: 180px;
+      text-align: center;
+      animation: bounceBtn 0.6s infinite alternate, fadeIn 1s ease-in-out;
+    }
+
+    .bouncing-button:hover {
+      background-color: darkblue;
+    }
+
+    @keyframes bouncePopup {
+      0% {
+        transform: translate(-50%, 0);
+      }
+      100% {
+        transform: translate(-50%, -15px);
+      }
+    }
+
+    @keyframes bounceImg {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-15px);
+      }
+    }
+
+    @keyframes bounceBtn {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes fadeOut {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .popup {
+        top: 8%;
+        padding: 0.75rem 1.25rem;
+        border-width: 3px;
+      }
+
+      .button-container {
+        bottom: 6%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <audio id="bgMusic" autoplay>
-        <source src="audio1.mpeg" type="audio/mpeg">
-    </audio>
-    <div id="popup" class="popup">Radhe Radhe Jeetudii💝</div>
-    <img id="bouncingImage" class="bouncing-image hidden" src="radhe1.jpeg" alt="Bouncing Image">
-    <div class="button-container">
-        <button id="redirectButton" class="bouncing-button hidden" onclick="redirect()">Chale ? 😁</button>
-    </div>
-    <script>
-        
-        document.getElementById('bgMusic').play();
-        setTimeout(() => {
-            document.getElementById('popup').classList.add('hidden');
-            document.getElementById('bouncingImage').classList.remove('hidden');
-            document.getElementById('redirectButton').classList.remove('hidden');
-        }, 5000);
-        function redirect() {
-            window.location.href = "last.html";
-        }
-    </script>
+  <audio id="bgMusic" autoplay>
+    <source src="audio1.mpeg" type="audio/mpeg" />
+  </audio>
+
+  <div id="popup" class="popup">Radhe Radhe Jeetudii💝</div>
+
+  <img
+    id="bouncingImage"
+    class="bouncing-image hidden"
+    src="radhe1.jpeg"
+    alt="Bouncing Image"
+  />
+
+  <div class="button-container">
+    <button
+      id="redirectButton"
+      class="bouncing-button hidden"
+      onclick="redirect()"
+    >
+      Chale ? 😁
+    </button>
+  </div>
+
+  <script>
+    // safer autoplay (may still be blocked on some phones)
+    const bgMusic = document.getElementById("bgMusic");
+    bgMusic
+      .play()
+      .catch(() => {
+        console.log("Autoplay blocked: user interaction needed.");
+      });
+
+    setTimeout(() => {
+      document.getElementById("popup").classList.add("hidden");
+      document.getElementById("bouncingImage").classList.remove("hidden");
+      document.getElementById("redirectButton").classList.remove("hidden");
+    }, 5000);
+
+    function redirect() {
+      window.location.href = "last.html";
+    }
+  </script>
 </body>
 </html>
